@@ -58,7 +58,7 @@ export const registerUserController = async (req, res) => {
 
         //Metodo save nos permite guardar el objeto en la DB
         await newUser.save()
-
+console.log({newUser})
 
         const url_verification = `http://localhost:${ENVIROMENT.PORT}/api/auth/verify/${verificationToken}`
         await sendEmail({
